@@ -1,7 +1,8 @@
 // import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import { Provider as PaperProvider } from "react-native-paper";
-// import { Provider as StoreProvider } from "redux";
+import store from "./store";
+import { Provider } from "react-redux";
 
 import RootNavigator from "./navigation/RootNavigator";
 
@@ -12,9 +13,11 @@ import RootNavigator from "./navigation/RootNavigator";
 
 export default function App() {
   return (
-    <PaperProvider>
-      <RootNavigator />
-    </PaperProvider>
+    <Provider store={store}>
+      <PaperProvider>
+        <RootNavigator />
+      </PaperProvider>
+    </Provider>
   );
 }
 
