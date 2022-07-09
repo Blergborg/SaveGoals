@@ -2,7 +2,7 @@
 const currencyFormat = (num) => {
   let formatted = num.toString();
   if (formatted.length > 2) {
-    formatted = formatted.substring(0, -2) + "." + formatted.substring(-2);
+    formatted = formatted.slice(0, -2) + "." + formatted.slice(-2);
   } else if (formatted.length > 1) {
     formatted = "0." + formatted;
   } else {

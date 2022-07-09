@@ -9,15 +9,12 @@ export const currentSavedSlice = createSlice({
     incrementByAmount: (state, action) => {
       state.value += action.payload;
     },
-  },
-  reducers: {
     decrementByAmount: (state, action) => {
-      state.value += action.payload;
+      state.value -= action.payload;
     },
   },
 });
 
-export const { incrementByAmount, decrementByAmount } =
-  currentSavedSlice.actions;
+export const { incrementByAmount, decrementByAmount } =currentSavedSlice.actions;
 
 export default currentSavedSlice.reducer;

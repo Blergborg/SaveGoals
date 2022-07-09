@@ -2,11 +2,7 @@ import React from "react";
 import { View } from "react-native";
 import { Text } from "react-native-paper";
 
-import { useSelector, useDispatch } from "react-redux";
-import {
-  incrementByAmount,
-  decrementByAmount,
-} from "../features/currentSaved/currentSavedSlice";
+import { useSelector } from "react-redux";
 
 import currencyFormat from "../helpers/currencyFormat";
 
@@ -17,7 +13,6 @@ import currencyFormat from "../helpers/currencyFormat";
 
 export default function HomeScreen() {
   const currentSaved = useSelector((state) => state.currentSaved.value);
-  const dispatch = useDispatch();
 
   const denomination = "$ ";
 
