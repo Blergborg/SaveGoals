@@ -1,14 +1,10 @@
 import React from "react";
-import { View } from "react-native";
-import { Text } from "react-native-paper";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
-import LoginScreen from "./LoginScreen";
-import HomeScreen from "./HomeScreen";
-import SaveScreen from "./SaveScreen";
-import GoalScreen from "./GoalScreen";
-import { createStackNavigator } from "@react-navigation/stack";
+import HomeScreen from "../screens/HomeScreen";
+import SaveScreen from "../screens/SaveScreen";
+import GoalScreen from "../screens/GoalScreen";
 
 const Tab = createBottomTabNavigator();
 

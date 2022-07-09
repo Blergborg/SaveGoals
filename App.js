@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 import { Provider as PaperProvider } from "react-native-paper";
 // import { Provider as StoreProvider } from "redux";
 
-import RootNavigator from "./screens/RootNavigator";
+import RootNavigator from "./navigation/RootNavigator";
 
 // TODO: Redux (current amount saved, user creds, currency denomination(?), language(keyboard?), ... )
 // Onboarding slides (best way to check if user is new?)

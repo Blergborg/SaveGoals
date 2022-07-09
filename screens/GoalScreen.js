@@ -39,7 +39,8 @@ export default function GoalScreen({navigation}) {
       <FAB 
         icon="plus"
         style={{ position: 'absolute', margin: 16, right: 0, bottom: 40 }}
-        onPress={() => <AddScreenNavigator screenName="Add Goal" screenComponent={<AddGoalScreen/>}/>}
+        // onPress={() => <AddScreenNavigator screenName="Add Goal" screenComponent={<AddGoalScreen/>}/>}
+        onPress={() => {}}
       />
     </View>
   );

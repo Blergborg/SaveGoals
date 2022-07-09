@@ -9,7 +9,7 @@ import { View, TextInput, Button } from "react-native";
 // Local cache / storage
 // Access camera / gallery
 // Compress pictures
-export const AddGoalScreen = () => (
+export const GoalFormScreen = () => (
   <View>
     <Text>Add New Goal</Text>
     <TextInput />
