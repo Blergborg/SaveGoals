@@ -1,5 +1,5 @@
 import React from "react";
-import { View, TextInput, Button } from "react-native";
+import { View, Text, TextInput, Button } from "react-native";
 // Camera access
 // Gallery access
 // Paste from clipboard
@@ -15,6 +15,6 @@ export const GoalFormScreen = () => (
     <TextInput />
     <TextInput />
     <TextInput />
-    <Button value="submit" />
+    <Button title="Submit" />
   </View>
 )

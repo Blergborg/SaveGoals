@@ -4,7 +4,8 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import HomeScreen from "../screens/HomeScreen";
 import SaveScreen from "../screens/SaveScreen";
-import GoalScreen from "../screens/GoalScreen";
+// import GoalScreen from "../screens/GoalScreen";
+import { StackNavigator } from "./StackNavigator";
 
 const Tab = createBottomTabNavigator();
 
@@ -13,7 +14,7 @@ export const TabNavigator = () => {
     <Tab.Navigator initialRouteName="Home">
       <Tab.Screen
         name="Goals"
-        component={GoalScreen}
+        component={StackNavigator}
         options={{
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons
