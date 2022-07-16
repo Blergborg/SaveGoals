@@ -1,7 +1,7 @@
 import React from "react";
 import { Avatar, Card, IconButton } from "react-native-paper";
 
-const GoalListTile = ({ name, price, details }) => {
+const GoalListTile = ({ name, price, details, edit }) => {
   return (
     <Card onLongPress={details}>
       <Card.Title
@@ -13,9 +13,10 @@ const GoalListTile = ({ name, price, details }) => {
           <IconButton
             {...props}
             icon="pencil"
-            onPress={() => {
-              console.log(`Edit ${name} tile.`);
-            }}
+            onPress={edit}
+            // onPress={() => {
+            //   console.log(`Edit ${name} tile.`);
+            // }}
           />
         )}
       />

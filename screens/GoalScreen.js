@@ -42,6 +42,13 @@ export default function GoalScreen({ navigation }) {
                 price: item.price,
               })
             }
+            edit={() => 
+              navigation.navigate("Goal Form", {
+                curName: item.key,
+                curPrice: item.price,
+                curDescription: 'this is a description',
+              })
+            }
           />
         )}
       />
@@ -49,7 +56,7 @@ export default function GoalScreen({ navigation }) {
         icon="plus"
         style={{ position: "absolute", margin: 16, right: 0, bottom: 40 }}
         onPress={() => {
-          navigation.navigate("Goal Form");
+          navigation.navigate("Goal Form", {});
         }}
       />
     </View>

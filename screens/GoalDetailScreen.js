@@ -5,9 +5,12 @@
 import React from "react";
 import { View, Text } from "react-native";
 
-export const GoalDetailScreen = ({ name, price }) => (
-  <View>
-    <Text>Goal Name: {name}</Text>
-    <Text>Goal Price: {price}</Text>
-  </View>
-);
+export const GoalDetailScreen = ({ route }) => {
+  const { name, price } = route.params;
+  return (
+    <View>
+      <Text>Goal Name: {name}</Text>
+      <Text>Goal Price: {price}</Text>
+    </View>
+  );
+};
