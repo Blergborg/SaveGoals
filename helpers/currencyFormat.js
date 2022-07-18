@@ -1,5 +1,5 @@
 // Formats integers into a 2 precision decimal string
-const currencyFormat = (num) => {
+export const currencyFormat = (num) => {
   let formatted = num.toString();
   if (formatted.length > 2) {
     formatted = formatted.slice(0, -2) + "." + formatted.slice(-2);
@@ -11,4 +11,8 @@ const currencyFormat = (num) => {
   return formatted;
 };
 
-export default currencyFormat;
+// Formats 2 precision float values into integers
+// doesn't allow for 
+export const currencyDeformat = (num) => (
+  (num === NaN ? 0 : num) * 100
+);

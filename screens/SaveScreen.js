@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { View } from "react-native";
 import { Text, TextInput, Button } from "react-native-paper";
+import CurrencyInput from "react-native-currency-input";
 
 import { useSelector, useDispatch } from "react-redux";
 import { incrementByAmount } from "../features/currentSaved/currentSavedSlice";
-import currencyFormat from "../helpers/currencyFormat";
+
+import { currencyFormat, currencyDeformat } from "../helpers/currencyFormat";
 
 export default function SaveScreen() {
   const [save, setSave] = useState("0");
@@ -22,15 +24,25 @@ export default function SaveScreen() {
       <TextInput
         style={{ width: 300 }}
         label="Amount Saved"
-        mode="flat"
-        keyboardType="decimal-pad"
-        value={save}
-        onChangeText={(newSave) => setSave(newSave)}
+        render={(props) => (
+          <CurrencyInput
+            {...props}
+            value={save}
+            onChangeValue={setSave}
+            prefix="$"
+            separator="."
+            delimiter=","
+            precision={2}
+            minValue={0}
+          />
+        )}
       />
       <Button
         icon="currency-usd"
         mode="contained"
-        onPress={() => dispatch(incrementByAmount(parseInt(save)))}
+        onPress={() => {
+          dispatch(incrementByAmount(currencyDeformat(save)));
+        }}
       >
         Save
       </Button>

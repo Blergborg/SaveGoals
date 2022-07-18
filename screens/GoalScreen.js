@@ -17,6 +17,8 @@ const styles = StyleSheet.create({
   },
 });
 
+
+
 export default function GoalScreen({ navigation }) {
   return (
     // <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
@@ -31,7 +33,6 @@ export default function GoalScreen({ navigation }) {
           { key: "3D Printer Parts", price: "$100.00" },
           { key: "Laptop", price: "$100.00" },
         ]}
-        // renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>}
         renderItem={({ item }) => (
           <GoalListTile
             name={item.key}

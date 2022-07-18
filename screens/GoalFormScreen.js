@@ -16,7 +16,7 @@ export const GoalFormScreen = ({ route }) => {
   const { curName, curPrice, curDescription } = route.params;
 
   const [name, setName] = useState(curName ? curName : "");
-  const [price, setPrice] = useState(curPrice ? curPrice : 0);
+  const [price, setPrice] = useState(curPrice ? curPrice : "0");
   const [description, setDescription] = useState(
     curDescription ? curDescription : ""
   );

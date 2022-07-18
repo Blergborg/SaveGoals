@@ -7,16 +7,13 @@ const GoalListTile = ({ name, price, details, edit }) => {
       <Card.Title
         title={name}
         subtitle={price}
-        // fn to navigation.navigate to details screen w/ Tile's item as params from GoalScreen.
         left={(props) => <Avatar.Icon {...props} icon="camera" />}
         right={(props) => (
           <IconButton
             {...props}
             icon="pencil"
+            // fn to navigation.navigate to details screen w/ Tile's item as params from GoalScreen.
             onPress={edit}
-            // onPress={() => {
-            //   console.log(`Edit ${name} tile.`);
-            // }}
           />
         )}
       />
