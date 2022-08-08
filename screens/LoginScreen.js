@@ -8,7 +8,7 @@ import {
   StyleSheet,
 } from "react-native";
 import { Button } from "react-native-paper";
-import { auth } from "../components/firebase-config";
+import { auth } from "../config/firebase-config";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 
 

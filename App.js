@@ -1,8 +1,9 @@
 // import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import { Provider as PaperProvider } from "react-native-paper";
-import store from "./store";
-import { Provider } from "react-redux";
+// import store from "./store";
+// import { Provider } from "react-redux";
+import { UserAuthContextProvider } from "./context/UserAuthContext";
 
 import RootNavigator from "./navigation/RootNavigator";
 
@@ -13,19 +14,22 @@ import RootNavigator from "./navigation/RootNavigator";
 
 export default function App() {
   return (
-    <Provider store={store}>
+    <UserAuthContextProvider>
       <PaperProvider>
         <RootNavigator />
       </PaperProvider>
-    </Provider>
+    </UserAuthContextProvider>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
+    // {/* <Provider store={store}> */}
+    // {/* </Provider> */}
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: "#fff",
+//     alignItems: "center",
+//     justifyContent: "center",
+//   },
+// });

@@ -1,8 +1,6 @@
-import React from "react";
-import { View } from "react-native";
-import { Text } from "react-native-paper";
+import React from "react"; import { View } from "react-native"; import { Text } from "react-native-paper";
 
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 
 import { currencyFormat } from "../helpers/currencyFormat";
 
@@ -10,7 +8,7 @@ import { currencyFormat } from "../helpers/currencyFormat";
 // What else to put on this page?
 
 export default function HomeScreen() {
-  const currentSaved = useSelector((state) => state.currentSaved.value);
+  const currentSaved = 3; // useSelector((state) => state.currentSaved.value);
 
   const denomination = "$ ";
 
